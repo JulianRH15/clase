@@ -34,7 +34,7 @@ public int create(MascotaDTO data) {
 	}
 }
 
-public ArrayList<MascotaDTO> findAll() {
+public List<MascotaDTO> findAll() {
 	ArrayList<Mascota> entiryList = (ArrayList<Mascota>) mascotaRepo.findAll();
 	ArrayList<MascotaDTO> dtoList = new ArrayList<>();
 	entiryList.forEach((entity) -> {
