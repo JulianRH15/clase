@@ -262,7 +262,7 @@ public int updateEspecie(Integer id, MascotaDTO newData) {
 	}
 }
 
-public ArrayList<MascotaDTO> findByNombre(String nombre) {
+public List<MascotaDTO> findByNombre(String nombre) {
     List<Mascota> entityList = mascotaRepo.findAllByNombre(nombre);
     ArrayList<MascotaDTO> dtoList = new ArrayList<>();
     entityList.forEach((entity) -> {
@@ -271,7 +271,7 @@ public ArrayList<MascotaDTO> findByNombre(String nombre) {
     });
     return dtoList;
 }
-public ArrayList<MascotaDTO> findByRaza(String raza) {
+public List<MascotaDTO> findByRaza(String raza) {
     List<Mascota> entityList = mascotaRepo.findByRaza(raza);
     ArrayList<MascotaDTO> dtoList = new ArrayList<>();
     entityList.forEach((entity) -> {
@@ -280,7 +280,7 @@ public ArrayList<MascotaDTO> findByRaza(String raza) {
     });
     return dtoList;
 }
-public ArrayList<MascotaDTO> findByTamanio(String tamanio) {
+public List<MascotaDTO> findByTamanio(String tamanio) {
     List<Mascota> entityList = mascotaRepo.findByTamanio(tamanio);
     ArrayList<MascotaDTO> dtoList = new ArrayList<>();
     entityList.forEach((entity) -> {
@@ -289,7 +289,7 @@ public ArrayList<MascotaDTO> findByTamanio(String tamanio) {
     });
     return dtoList;
 }
-public ArrayList<MascotaDTO> findByPeso(double peso) {
+public List<MascotaDTO> findByPeso(double peso) {
     Optional<Mascota> entity = mascotaRepo.findByPeso(peso);
     ArrayList<MascotaDTO> dtoList = new ArrayList<>();
     entity.ifPresent((mascota) -> {
@@ -298,7 +298,7 @@ public ArrayList<MascotaDTO> findByPeso(double peso) {
     return dtoList;
 }
 
-public ArrayList<MascotaDTO> findByGenero(String genero) {
+public List<MascotaDTO> findByGenero(String genero) {
     List<Mascota> entityList = mascotaRepo.findByGenero(genero);
     ArrayList<MascotaDTO> dtoList = new ArrayList<>();
     entityList.forEach((entity) -> {
@@ -307,7 +307,7 @@ public ArrayList<MascotaDTO> findByGenero(String genero) {
     });
     return dtoList;
 }
-public ArrayList<MascotaDTO> findByEspecie(String especie) {
+public List<MascotaDTO> findByEspecie(String especie) {
     List<Mascota> entityList = mascotaRepo.findByEspecie(especie);
     ArrayList<MascotaDTO> dtoList = new ArrayList<>();
     entityList.forEach((entity) -> {
